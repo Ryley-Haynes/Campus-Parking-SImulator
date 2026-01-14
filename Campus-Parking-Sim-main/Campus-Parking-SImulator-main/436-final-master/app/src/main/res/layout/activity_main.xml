@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startTitle"
+        android:text="ParkSpot!"
+        android:textSize="36sp"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+
+        />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentBottom="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/count"
+        android:text="Number Of Cars Added:"
+        android:textSize="24sp"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/startToMap"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-400dp"
+        android:text="0"
+        android:textSize="24sp"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:id="@+id/availabilityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:layout_marginBottom="50dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/startTitle"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:textSize="36sp"
+        android:id="@+id/startToMap"
+        android:layout_below="@id/availabilityText"
+        android:text="Start"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:textSize="36sp"
+        android:id="@+id/startToOption"
+        android:layout_below="@id/startToMap"
+        android:text="Options"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextClock
+        android:id="@+id/timeClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/startToOption"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:format12Hour="h:mm a"
+        android:format24Hour="HH:mm"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:timeZone="America/New_York"
+        />
+
+    <TextView
+        android:id="@+id/timeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeClock"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Parking activity prediction pending..."
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:padding="8dp"
+        />
+
+</RelativeLayout>
